@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ElectionBook</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<style>
+			figure { display: block; background: #eee; padding: 10px; }
+			figcaption { display: block; text-align: center; margin: 10px; text-style: bold; color: black;}
+		</style>
+		<script>
+		$(function() {
+    
+		var $allVideos = $("iframe[src^='https://india-election2014.appspot.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+		$fluidEl = $("figure");
+	    	
+		$allVideos.each(function() {
+	
+		$(this)
+	    // jQuery .data does not work on object/embed elements
+	    .attr('data-aspectRatio', this.height / this.width)
+	    .removeAttr('height')
+	    .removeAttr('width');
+	
+		});
+	
+		$(window).resize(function() {
+	
+		var newWidth = $fluidEl.width();
+		$allVideos.each(function() {
+	  
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.attr('data-aspectRatio'));
+	  
+				});
+	
+			}).resize();
+
+		});
+		</script>
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="#">Election Book</a></h1>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a target="_blank" href="http://ibn.gramener.com/parliament#cartogram?BY=2014-Schedule">Schedule</a></li>
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#contact">#PledgeToVote</a></li>
+							<li><a href="#one">Inspirations</a></li>
+							<li><a href="#two">Candidates</a></li>
+							<li><a href="#work">Wiki</a></li>
+						</ul>
+					</nav>
+			</header>
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content container small">
+					<header>
+						<h2><a href="#contact">#PledgeToVote</a></h2>
+					</header>
+					<p> Lets make <strong>India</strong> better.</p>
+					<a target="_blank" href="http://ibn.gramener.com/parliament" class="button style2 ">Election History</a>
+					<a target="_blank" href="http://ibn.gramener.com/parliament#cartogram?BY=2014-Schedule" class="button style2 ">Schedule</a>
+					<a target="_blank" href="http://timesofindia.indiatimes.com/tmes-now-cvoter-national-lok-sabha-election-survey/liveblog/30348665.cms" class="button style2 ">Election Survey</a>
+					<br/>
+					<br/>
+					<p> Below Links are specific to <strong>Andhra Pradesh</strong> Only.</p>
+					<a target="_blank" href="http://ibn.gramener.com/parliament#state?STATE=ANDHRA%20PRADESH" class="button style2 ">History</a>
+					<a target="_blank" href="http://123.176.47.52/pollingstation/" class="button style2 ">Poll Booth Locator</a>
+					<a target="_blank" href="http://ceoaperms.ap.gov.in/Search/search1.aspx" class="button style2 ">Search Your Name</a>
+					<a target="_blank" href="http://en.wikipedia.org/wiki/Andhra_Pradesh_Legislative_Assembly_election,_2014" class="button style2 ">Candidates Info</a>
+					<footer>
+						<a href="#contact" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+		<!-- Pledge -->
+			<section id="contact" class="main style2  dark primary">
+				<figure>
+					<figcaption>Thanks to <strong>Google India</strong> for starting such a wonderful initiative</figcaption>
+					<iframe width="1280" height="500" src="https://india-election2014.appspot.com" frameborder="0" ></iframe>				
+				</figure>	
+					<a href="#one" class="button style2 down anchored">Next</a>
+			</section>	
+		<!-- One -->
+			<section id="one" class="main style2  dark primary">
+			<figure>
+				<iframe width="1280" height="500" src="http://www.youtube.com/embed/zwRK4oL4O60" frameborder="10" allowfullscreen></iframe>				
+				<figcaption>Satyamev Jayate - Episode 05 : <strong>Criminalization Of Politics</strong></figcaption>
+			</figure>
+			<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+		<!-- Two -->
+			<section id="two" class="main style3 dark primary">
+			<div class="content container">
+					<header>
+						<h2>LokSabha Candidates - Elections 2014</h2>
+						<p></p>
+					</header>
+				</div>	
+<div class="pol-sidebar-item">
+  <div>
+    <div class="pol-on-plus" style = "float: left; width: 33%;">
+      <a href="http://www.elections.in/parliamentary-constituencies/indian-national-congress-party.html" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/inc.png" alt="INC" >
+      </a>
+      <div >
+        <p >
+          <a href="http://aicc.org.in/" target="_blank">
+            INC
+          </a>
+        </p>
+        <p >
+          Indian National Congress
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="pol-on-plus" style = "float: left; width: 33%;">
+      <a href="http://en.wikipedia.org/wiki/List_of_National_Democratic_Alliance_candidates_in_the_Indian_general_election,_2014" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/bjp.png" alt="BJP" >
+      </a>
+      <div >
+        <p >
+          <a href="http://www.bjp.org/" target="_blank">
+            BJP
+          </a>
+        </p>
+        <p>
+          Bhartiya Janta Party
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="pol-on-plus" style = "float: left; width: 33%;">
+      <a href="http://www.aamaadmiparty.org/complete-candidate-list-2014-elections" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/aap.png" alt="AAP" >
+      </a>
+      <div>
+        <p>
+          <a href="http://aamaadmiparty.org/" target="_blank">
+            AAP
+          </a>
+        </p>
+        <p>
+          Aam Aadmi Party
+        </p>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+			
+		
+
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+			
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content container">
+					<header>
+						<h2>Wiki</h2>
+						<p>There are lot of resources to know about our politics and politicians, It is high time 
+						for us to find a right <strong>Leader</strong>.</br>Below are some of the links</p>
+					</header>
+				</div>	
+				<div class="pol-sidebar-item" style = "float: left; padding-left:10%; width: 33%;">
+					<h3>
+					More Election Resources
+					</h3>
+					<br>
+					<div>
+						<a href="https://www.youtube.com/indiaelections2014" target="_blank">
+						<img src="//www.google.com/images/icons/product/youtube-42.png" alt="YouTube Election Hub" >
+						</a>
+						<p>
+						<a href="https://www.youtube.com/indiaelections2014" target="_blank">
+						YouTube Election Hub
+						</a>
+						</p>
+						<br>
+					</div>
+				<div>
+  <a href="http://www.myneta.info" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/in/adr.png" alt="Association for Democratic Reforms" >
+  </a>
+  <div>
+    <p>
+      <a href="http://www.myneta.info" target="_blank">
+        Association for Democratic Reforms
+      </a>
+    </p>
+    <p>
+      Know your Neta, before you vote.
+    </p>
+    <br>
+  </div>
+</div>
+<div>
+  <a href="http://www.prsindia.org/" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/in/prs.png" alt="PRS Legislative Research" >
+  </a>
+  <div >
+    <p>
+      <a href="http://www.prsindia.org/" target="_blank">
+        PRS Legislative Research
+      </a>
+    </p>
+    <p >
+      Opening Parliament, Informing Debate
+    </p>
+    <br>
+  </div>
+</div>
+<div>
+  <a href="http://www.empoweringindia.org" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/in/empowering.png" alt="Empowering India" >
+  </a>
+  <div >
+    <p >
+      <a href="http://www.empoweringindia.org" target="_blank">
+        Empowering India
+      </a>
+    </p>
+    <p >
+      Making democracy meaningful
+    </p>
+    <br>
+  </div>
+</div>
+<div>
+  <a href="http://iforindia.org/?load=1" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/in/iforindia.png" alt="I for India" >
+  </a>
+  <div >
+    <p >
+      <a href="http://iforindia.org/?load=1" target="_blank">
+        I for India
+      </a>
+    </p>
+    <p >
+      &quot;If it’s not by you, it’s not for you” – Rate your Neta.
+    </p>
+    <br>
+  </div>
+</div>
+<div>
+  <a href="http://www.ivoteforabetterindia.in/" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/in/ivoteforabetterindia.png" alt="I vote for a Better India" >
+  </a>
+  <div >
+    <p >
+      <a href="http://www.ivoteforabetterindia.in/" target="_blank">
+        I vote for a Better India
+      </a>
+    </p>
+    <p >
+      &quot;One Vote for a Better India&quot;
+    </p>
+    <br>
+  </div>
+</div>
+<div>
+  <a href="http://eci.nic.in/eci_main1/Linkto_electo_search.aspx" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/blank.png" alt="Election Commission of India" >
+  </a>
+  <div >
+    <p >
+      <a href="http://eci.nic.in/eci_main1/Linkto_electo_search.aspx" target="_blank">
+        Election Commission of India
+      </a>
+    </p>
+    <p >
+      Search your name in the Voter List
+    </p>
+    <br>
+  </div>
+</div>
+<div>
+  <a href="http://www.jaagore.com/vote/faq.php?sectId=8" target="_blank">
+    <img src="https://www.gstatic.com/politics/e/img/blank.png" alt="Voter FAQs" >
+  </a>
+  <div >
+    <p >
+      <a href="http://www.jaagore.com/vote/faq.php?sectId=8" target="_blank">
+        Voter FAQs
+      </a>
+    </p>
+    <p >
+      Frequently Asked Questions related to voting and poll day
+    </p>
+    <br>
+  </div>
+</div>
+</div>
+<div class="pol-sidebar-item" style = "float: left; padding-left:10%; width: 33%;">
+  <div class="right-box-header">
+    <h3>
+      Party Resources
+    </h3>
+    <div class="pin-stripe">
+    </div>
+    <div class="pol-on-plus ">
+      <a href="http://aicc.org.in/" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/inc.png" alt="INC" >
+      </a>
+      <div >
+        <p >
+          <a href="http://aicc.org.in/" target="_blank">
+            INC
+          </a>
+        </p>
+        <p >
+          Indian National Congress
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="pol-on-plus ">
+      <a href="http://www.bjp.org/" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/bjp.png" alt="BJP" >
+      </a>
+      <div >
+        <p >
+          <a href="http://www.bjp.org/" target="_blank">
+            BJP
+          </a>
+        </p>
+        <p>
+          Bhartiya Janta Party
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="pol-on-plus ">
+      <a href="http://www.bspindia.org/" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/bsp.png" alt="BSP" >
+      </a>
+      <div>
+        <p>
+          <a href="http://www.bspindia.org/" target="_blank">
+            BSP
+          </a>
+        </p>
+        <p >
+          Bahujan Samaj Party
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="pol-on-plus ">
+      <a href="http://aamaadmiparty.org/" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/aap.png" alt="AAP" >
+      </a>
+      <div>
+        <p>
+          <a href="http://aamaadmiparty.org/" target="_blank">
+            AAP
+          </a>
+        </p>
+        <p>
+          Aam Aadmi Party
+        </p>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div>
+    <h3>
+      The Campaign on YouTube
+    </h3>
+    <div>
+      <a href="https://www.youtube.com/indiacongress" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/inc.png" alt="INC" title="INC">
+      </a>
+    </div>
+    <div>
+      <a href="https://www.youtube.com/user/BJP4India" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/bjp.png" alt="BJP" title="BJP">
+      </a>
+    </div>
+    <div>
+      <a href="https://www.youtube.com/user/bahujansamajparty" target="_blank">
+        <img src="https://www.gstatic.com/politics/e/img/in/parties/bsp.png" alt="BSP" title="BSP">
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+			
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content container">
+					<header>
+						<h2>Say Hello.</h2>
+						<p>Reach us @ info.aryabhata@gmail.com</p>
+					</header>
+
+						<a href="mailto:info.aryabhata@gmail.com"><img src="./images/contact.png" width="25%" height="25%"><a>
+			
+			</section>
+			
+		<!-- Footer -->
+			<footer id="footer">
+			
+				<!--
+				     Social Icons
+				     
+				     Use anything from here: http://fortawesome.github.io/Font-Awesome/cheatsheet/)
+				-->
+					<ul class="actions">
+						<li><a href="#" class="fa solo fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa solo fa-google-plus"><span>Google+</span></a></li>
+						<li><a href="#" class="fa solo fa-dribbble"><span>Dribbble</span></a></li>
+						<li><a href="#" class="fa solo fa-pinterest"><span>Pinterest</span></a></li>
+						<li><a href="#" class="fa solo fa-instagram"><span>Instagram</span></a></li>
+					</ul>
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; ElectionBook</li>
+						<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+					</ul>
+			
+			</footer>
+
+	</body>
+</html>
