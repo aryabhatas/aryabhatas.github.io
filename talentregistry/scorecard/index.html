@@ -1,0 +1,166 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>The Open Source Report Card</title>
+
+    <link rel="stylesheet" href="/static/normalize.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/static/osrc.css?v=2" type="text/css" media="screen" charset="utf-8">
+    <script src="/static/jquery-1.9.1.min.js"></script>
+
+</head>
+<body>
+
+    <div id="banner">
+        <div class="container">
+            <strong>Dear recruiters:</strong>
+            While you read this, make sure that you remember that
+            <a href="http://blog.jcoglan.com/2013/11/15/why-github-is-not-your-cv/">GitHub is not your C.V.</a>
+            and that these stats only provide a <i>biased and one-sided view</i>.
+            This is just a toy. Don't take it too seriously!
+            <span class="promise">OK. I promise!</span>
+        </div>
+    </div>
+
+    <div class="header">
+        <a class="header-title" href="/">The<br>Open Source<br>Report Card</a>
+        <div id="fusion_ad">
+    <a href="http://fusionads.net">Powered by Fusion</a>
+</div>
+
+<script type="text/javascript">
+(function(){
+ var fusion = document.createElement('script');
+ fusion.src = window.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=280&rand=' + Math.floor(Math.random()*9999999);
+ fusion.async = true;
+ (document.head || document.getElementsByTagName('head')[0]).appendChild(fusion);
+})();
+</script>
+
+    </div>
+
+    <div class="container">
+
+
+
+<div class="front-splash">
+    <div class="splash-text">
+        
+        Enter a <a href="https://github.com">GitHub</a> username to
+see a dynamically generated progress report for their open source
+contributions
+        
+    </div>
+    <form class="nav-form">
+        <input id="username" type="text" placeholder="Enter a GitHub username">
+    </form>
+</div>
+
+<script>
+    function goto_user (e) {
+        var val = $("#username").val();
+        e.preventDefault();
+        if (val) window.location = "/" + val;
+        return false;
+    }
+    $(function () {
+        $(".nav-form").on("submit", goto_user);
+    });
+</script>
+
+<h1 id="how-it-works">
+    How it works
+</h1>
+
+<p>
+Every day, many thousands of open source contributions are made on
+<a href="https://github.com">GitHub</a> by developers around the world.
+This data is publicly available through
+<a href="http://developer.github.com">the API</a> and&mdash;even more
+conveniently&mdash;on the <a href="http://githubarchive.org/">GitHub
+Archive</a>. This is generally a pretty fun dataset to play with but it
+is particularly exciting for hackers because we get to play with data that
+describes <i>our own behavior</i>! Last year, shortly after the full event
+stream was publicly released,
+<a href="https://github.com/blog/1118-the-github-data-challenge">the first
+annual GitHub data challenge</a> produced
+<a href="https://github.com/blog/1162-github-data-challenge-winners">some
+sick data visualizations</a> and it's clear that people at GitHub
+<a href="https://github.com/blog/1360-introducing-contributions">have</a>
+<a href="https://github.com/blog/1476-get-up-to-speed-with-pulse">been</a>
+<a href="https://github.com/blog/1359-the-octoverse-in-2012">thinking</a>
+about how to Use The Data For Good™.
+</p>
+
+<p>
+The one graph that is especially awesome
+in all sorts of surprising ways is the
+<a href="https://github.com/blog/1360-introducing-contributions">contributions
+heat map</a> on every user's profile page. What sets this apart from the
+other visualizations that already exist on the site? It makes a <i>general
+statement</i> about <i>one specific user</i>. It lets a developer have a
+global view of their contributions, skills and habits. This ends up being
+extremely motivating because it lets the developer see their progress in
+real time. With this in mind, it seemed like a good idea to provide a more
+complete set of global statistics summarizing the hacker personality of
+any GitHub user.
+</p>
+
+<p>
+So that's what I did.
+</p>
+
+<p>
+<strong>The Open Source Report Card</strong> is an open source project
+<a href="https://github.com/dfm/osrc">developed on GitHub</a>
+and <a href="https://github.com/dfm/osrc/blob/master/LICENSE">licensed under
+the MIT License</a>.
+</p>
+
+</div>
+
+    <div class="container">
+        <div id="footer">
+            The Open Source Report Card was built by
+            <a href="http://dan.iel.fm">Dan Foreman-Mackey</a> based on event
+            data from the <a href="https://github.com">GitHub</a>
+            <a href="http://githubarchive.org">timeline</a>.
+            Want <a href="/#how-it-works">more information</a>?
+        </div>
+    </div>
+
+    <script>
+
+        function hide_banner () {
+            $("#banner").hide();
+            document.cookie = "osrc_promise=true";
+            return false;
+        }
+
+        $(function () {
+            $("#banner .promise").on("click", hide_banner);
+
+            var cookie = document.cookie,
+                s = cookie.indexOf("osrc_promise="), e;
+            if (s == -1) return;
+            s = cookie.indexOf("=", s) + 1;
+            e = cookie.indexOf(";", s);
+            if (e == -1) e = cookie.length;
+            if (cookie.substring(s, e) === "true") $("#banner").hide();
+        });
+
+    </script>
+    
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-49884191-1', 'dfm.io');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>
